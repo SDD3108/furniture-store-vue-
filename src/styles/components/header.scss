@@ -1,0 +1,119 @@
+@import './mixins-extends.scss';
+@import './vars.scss';
+
+.header{
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+.header-top__container {
+    width: 1251.07px;
+    @extend %flex-column !optional;
+    // padding-top: 14.66px;
+    padding: 14.66px 0 15.5px 0;
+    // box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+.header-top__one {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.7px solid $gray-color;
+    padding-bottom: 15px;
+}
+.logo {
+    width: 133.33px;
+}
+.header-top__one__search-busket {
+    width: 206.65px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-top__one__search-busket__search {
+    width: 76.24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.header-top__one__search-busket__search:hover{
+    cursor: pointer;
+}
+.header-top__one__search-busket__search-text {
+    @include font-style($desc-color,13px,500,none,$font3);
+}
+.header-top__one__search-busket__busket {
+    width: 103.41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.header-top__one__search-busket__busket:hover{
+    cursor: pointer;
+}
+.header-top__one__search-busket__busket-text {
+    @include font-style($desc-color,13px,500,none,$font3);
+}
+.header-top__two {
+    width: 422px;
+    @extend %flex-between;
+    margin-top: 12.78px;
+}
+.header-top__two-ul {
+    display: flex;
+    gap: 32px;
+}
+.header-top__two-li {
+    @extend %flex-c;
+    @include font-style($text-color,15px,500,none,$font-family)
+}
+.header-top__two-li:hover{
+    cursor: pointer;
+}
+.header-top__two__side-bar {
+    height: 20px;
+    @extend %flex-column-between;
+    z-index: 50;
+}
+.header-top__two__side-bar__line {
+    width: 20.92px;
+    height: 2px;
+    background-color: $text-color;
+}
+.header-top__two-li-sidebar{
+    width: 171.92px;
+    @extend %flex-between-c;
+}
+.header-top__two-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.header-top__two-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 50;
+}
+.header-top__two-sidebar__close-btn{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    background: none;
+    svg{
+        color: $first-color;
+    }
+}
+.header-top__two-sidebar-enter-active, .header-top__two-sidebar-leave-active{
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-top__two-sidebar-enter-from,.header-top__two-sidebar-leave-to{
+  transform: translateX(-200%);
+}

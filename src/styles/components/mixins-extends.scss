@@ -1,0 +1,40 @@
+@mixin font-style($color,$fs,$fw,$lh,$ff){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    font-family: $ff;
+}
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex-c{
+    display: flex;
+    align-items: center;
+}
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+%flex-column-c-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+%flex-column-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+%flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+%flex-between-c{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

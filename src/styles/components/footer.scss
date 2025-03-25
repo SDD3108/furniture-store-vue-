@@ -1,0 +1,64 @@
+@import './mixins-extends.scss';
+@import './vars.scss';
+
+.footer{
+    height: 346.06px;
+    background-color: $footer-color;
+    // position: absolute;
+    // bottom: 0;
+}
+.footer__container{
+    padding-top: 33.87px;
+    @extend %flex-column;
+}
+.footer__container__content{
+    display: flex
+}
+.footer__joing {
+    @extend %flex-column;
+    row-gap: 21px;
+}
+.footer__joing-text {
+    @include font-style($white-color,24px,600,125%,$font-family)
+}
+.footer__joing__social-medias {
+    width: 122.73px;
+    @extend %flex-between-c
+}
+.footer__joing__social-media {
+    width: 32.88px;
+    height: 32.88px;
+    border-radius: 100%;
+    background-color: $white-color;
+    @extend %flex-center;
+}
+.footer__menu {
+    margin-top: 12px;
+    display: flex;
+}
+.footer__menu-catalog{
+    margin-left: 121.47px;
+}
+.footer__menu-others{
+    margin-left: 43px;
+}
+.footer__menu-navigation{
+    margin-left: 56.67px;
+}
+.footer__menu-contacts{
+    margin-left: 67.77px
+}
+.footer__menu__title {
+    @include font-style($white-color,16px,400,150%,$font-family);
+    margin-bottom: 18px;
+}
+.footer__menu__description {
+    @include font-style($white-color,14px,500,129%,$font-family);
+    margin-bottom: 3.3px;
+}
+.footer__line{
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}

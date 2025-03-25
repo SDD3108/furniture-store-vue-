@@ -1,0 +1,158 @@
+@import '../components/vars.scss';
+@import '../components/mixins-extends.scss';
+
+.catalog {
+    margin-top: 48px;
+}
+.catalog__line {
+    width: 57px;
+    height: 3px;
+    background-color: $first-color;
+    margin-top: 21px;
+}
+.catalog__container {
+    margin-top: 35px;
+    // @extend %flex-between;
+    display: flex;
+    column-gap: 32px;
+}
+.catalog__container__categories {
+    width: 289px;
+    height: 686px;
+    border-radius: 10px;
+    border: 1px solid $third-gray-color;
+    @extend %flex-column;
+    align-items: center;  
+}
+.catalog__container__categories__text {
+    width: 250px;
+    margin-top: 24px;
+}
+.catalog__container__categories__text-title {
+    @include font-style($text-color,16px,700,none,$font-family);
+    text-transform: uppercase;
+}
+.catalog__container__categories__text-line{
+    margin-top: 14px;
+}
+.catalog__container__categories__container {
+    margin-top: 24px;
+}
+.catalog__container__categories__container__category {
+    width: 250px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+.catalog__container__categories__container__category__container{
+    height: 19px;
+    @extend %flex-c;
+    // cursor: pointer;
+}
+.catalog__container__categories__container__category-point {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    // background-color: $first-color;
+    background-color: $desc-color;
+    margin-right: 20px;
+}
+.catalog__container__categories__container__category-title {
+    @include font-style($text-color,16px,400,none,$font-family);
+}
+.catalog__container__categories__container__category-line{
+    margin-top: 14px;
+}
+.catalog__container__categories__container__category__container_active 
+.catalog__container__categories__container__category-point{
+    background-color: $first-color;
+}
+.catalog__container__categories__container__category__container_active
+.catalog__container__categories__container__category-title{
+    color: $first-color;
+    font-weight: 700;
+}
+.catalog__container__products {
+}
+.catalog__container__products__filter {
+    width: 291px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid $fourth-gray-color;
+    background-color: $white-color;
+    @extend %flex-center;
+}
+.catalog__container__products__filter__label {
+    display: flex;
+}
+.catalog__container__products__filter__label-img {
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+}
+.catalog__container__products__filter__label-text {
+    @include font-style($second-text-color,14px,400,none,$font-family);
+}
+.catalog__container__products__filter__select {
+    @include font-style($green-color,14px,400,none,$font-family);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin-left: 12px;
+    appearance: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // background-image: url("/images/catalog/Vector\ 175.svg");
+    // background-position: right 3px center;
+    // background-repeat: no-repeat;
+    background: url("/images/catalog/Vector\ 175.svg") no-repeat right;
+    width: 126px;
+    background-size: 9px 6px;
+    // padding-right: 15px;
+    // align-items: center;
+    // border-radius: 0;
+}
+.catalog__container__products__filter__select::after{
+    content: "";
+    color: $fifth-gray-color;
+    background-color: $fifth-gray-color;
+}
+.catalog__container__products__cards {
+    display: grid;
+    grid-template-columns: repeat(3,289px);
+    grid-template-rows: 392px 392px;
+    column-gap: 32px;
+    row-gap: 15px;
+    margin-top: 25px;
+}
+.catalog__container__products__filter__select-option{
+    border-radius: 0px;
+}
+.catalog__container__products__pagination {
+    @extend %flex-center;
+    margin-bottom: 100px;
+}
+.catalog__container__products__pagination-button {
+    width: 67px;
+    height: 42px;
+    border-radius: 7px;
+    border: 1px solid $sixth-gray-color;
+    @extend %flex-center;
+    background-color: $white-color;
+}
+.catalog__container__products__pagination__pages{
+    margin: 0 26px 0 26px;
+    @extend %flex-center;
+    gap: 12px;
+}
+.catalog__container__products__pagination__pages-page{
+    width: 30px;
+    height: 42px;
+    border-radius: 7px;
+    @include font-style($text-color,18px,600,none,$second-family);
+    cursor: pointer;
+    // background-color: $desc-color;
+}
+.catalog__container__products__pagination__pages_page_active{
+    background-color: $first-color;
+    color: $white-color;
+    cursor:default;
+}

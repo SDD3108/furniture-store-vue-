@@ -1,0 +1,283 @@
+@import '../components/vars.scss';
+@import '../components/mixins-extends.scss';
+
+.buying{
+    margin: 63px 0 100px 0;
+}
+.buying__container{
+    display: flex;
+    gap: 32px;
+}
+.buying__container__info__user{
+    @extend %flex-column;
+    gap: 10px;
+    margin-top: 22px;
+}
+.buying__container__info__user__fio{
+    display: flex;
+    gap: 20px;
+}
+.buying__container__info__user__fio-input{
+    width: 293px;
+    height: 64px;
+    border-radius: 10px;
+    padding: 18px 21px;
+    border: 1px solid $eleventh-gray-color;
+    margin-top: 5px;
+    @include font-style($input-text-color,16px,500,175%,$font-family);
+}
+.buying__container__info__user-title{
+    @include font-style($sixth-gray-color,16px,500,175%,$font-family);
+    opacity: 0.55;
+}
+.buying__container__info__user-input{
+    width: 608px;
+    height: 64px;
+    border-radius: 10px;
+    padding: 21px 25px;
+    background-color: $white-color;
+    border: 1px solid $eleventh-gray-color;
+    @include font-style($input-text-color,16px,400,137%,$font-family);
+    margin-top: 5px;
+}
+.buying__container__info__user__addres-title{
+    line-height: 150%;
+}
+.buying__container__info__user__addres__input {
+    position: relative;
+    margin-top: 16px;
+}
+.buying__container__info__user__addres__input-input {
+    width: 608px;
+    height: 48px;
+    border-radius: 10px;
+    padding: 12px 48px;
+    background-color: $eleventh-gray-color;
+    @include font-style($input-text-color,14px,400,114%,$font-family);
+}
+.buying__container__info__user__addres__input-img {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+.buying__container__info__user__description-textarea{
+    margin-top: 6px;
+    max-width: 607px;
+    width: 607px;
+    height: 143px;
+    border-radius: 10px;
+    padding: 20px 21px;
+    border: 1px solid $eleventh-gray-color;
+    @include font-style($input-text-color,16px,500,175%,$font-family);
+}
+.buying__container__info__order {
+    @extend %flex-column;
+    gap: 22px;
+
+}
+.buying__container__info__order__payment {
+    @extend %flex-c;
+    gap: 10px;
+}
+.buying__container__info__order__payment__delivery{
+    width: 340px;
+    height: 145px;
+    border-radius: 10px;
+    border: 1px solid $eleventh-gray-color;
+    // @extend %flex-center;
+    @extend %flex-column;
+    // justify-content: center;
+    // align-items: center;
+    gap: 20px;
+    padding: 18px 0 0 10px;
+}
+.buying__container__info__order__payment__delivery__text {
+    @extend %flex-column;
+    gap: 24px;
+    // margin-top: 18px;
+}
+.buying__container__info__order__payment__delivery__text-title {
+    @include font-style($text-color,30px,600,64%,$font-family);
+    height: 21px;
+}
+.buying__container__info__order__payment__delivery__text-description {
+    @include font-style($sixth-text-color,16px,400,150%,$font-family);
+    opacity: 0.55;
+    height: 11px;
+}
+.buying__container__info__order__payment__payment{
+    width: 473px;
+    height: 145px;
+    border-radius: 10px;
+    border: 1px solid $eleventh-gray-color;
+    @extend %flex-column;
+    gap: 20px;
+    padding: 18.2px 0 0 8.5px;
+}
+.buying__container__info__order__payment__payment__text{
+    @extend %flex-column;
+    gap: 24px;
+}
+.buying__container__info__order__buyer-instruction{
+    @include font-style($sixth-text-color,12px,400,200%,$font-family);
+    opacity: 0.55;
+    height: 9px;
+}
+.buying__container__info__order__buyer {
+    height: 330px;
+    @extend %flex-column;
+    gap: 20px
+}
+.buying__container__info__order__buyer__index-title {
+    @include font-style($seventh-text-color,14px,500,143%,$font-family);
+}
+.buying__container__info__order__buyer__index-input {
+    margin-top: 6px;
+    width: 824px;
+    height: 48px;
+    border-radius: 10px;
+    padding: 0px 20px;
+    border: 1px solid $eleventh-gray-color;
+    @include font-style($second-input-text-color,16px,400,150%,$font4);
+}
+.buying__container__info__order__buyer__input{
+    position: relative;
+}
+.buying__container__info__order__buyer__input-img{
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+.buying__container__info__order__buyer-input{
+    width: 824px;
+    height: 48px;
+    padding: 12px 48px;
+    border-radius: 10px;
+    background-color: $eleventh-gray-color;
+    @include font-style($input-text-color,14px,400,114%,$font-family);
+}
+.buying__container__info__order__buyer__text {
+    @extend %flex-column;
+    gap: 31px;
+}
+.buying__container__info__order__buyer__text-title {
+    @include font-style($text-color,30px,600,130%,$font-family);
+    height: 21px;
+}
+.buying__container__info__order__buyer__text-description {
+    @include font-style($sixth-text-color,16px,400,150%,$font-family);
+    opacity: 0.55;
+    height: 11px;
+}
+.buying__container__info__order__buyer__faces {
+    // margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+.buying__container__info__order__buyer__faces__container{
+    // display: flex;
+    @extend %flex-c;
+}
+.buying__container__info__order__buyer__faces__container-title{
+    @include font-style($black-color,16px,500,149%,$font-family);
+    margin-left: 10px;
+}
+.buying__container__info__order__buyer__faces__container-input {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: $white-color;
+    border: 1px solid $eleventh-gray-color;
+    @extend %flex-center;
+    cursor: pointer;
+}
+.buying__container__info__order__buyer__faces__container-input-point{
+    width: 13px;
+    height: 13px;
+    background-color: $white-color;
+    border: 0;
+    border-radius: 100%;
+    display: none;
+}
+.buying__container__info__order__buyer__faces__container-input.active{
+    background: linear-gradient(51deg, $gradient-color-one 0%, $gradient-color-two 100%);
+    .buying__container__info__order__buyer__faces__container-input-point{
+        display: block;
+    }
+}
+.buying__container__counter {
+    width: 397px;
+    height: 308px;
+    border-radius: 10px;
+    border: 1px solid $eighth-gray-color;
+    padding: 18px 26px 0 26px;
+    @include font-style($sixth-text-color,13px,700,169%,$font-family);
+}
+.buying__container__counter__change {
+    @extend %flex-between;
+}
+.buying__container__counter__change-btn {
+    background: none;
+    cursor: pointer;
+    a{
+        color: $third-desc-color;
+    }
+}
+.buying__container__counter__score__product{
+    @extend %flex-between;
+}
+.buying__container__counter__score__product-price{
+    @include font-style($sixth-text-color,13px,700,169%,$font4);
+}
+.buying__container__counter__score {
+    margin-top: 42px;
+    @extend %flex-column;
+    gap: 19px;
+}
+.buying__container__counter__score__product__text{
+    width: 230px;
+    @extend %flex-column;
+    gap: 2px;
+}
+.buying__container__counter__score__product__text-title {
+    @include font-style($sixth-text-color,16px,600,130%,$font-family);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.buying__container__counter__score__product__text-description {
+    @include font-style($third-desc-color,9px,400,122%,$font-family);
+}
+.buying__container__counter__score__nds__line{
+    width: 69px;
+    height: 0.50px;
+    background-color: $tenh-gray-color;
+}
+.buying__container__counter__score__delivery {
+    @extend %flex-column;
+}
+.buying__container__counter__score__container{
+    @extend %flex-between;
+}
+.buying__container__counter__score__delivery__line{
+    width: 187px;
+    height: 0.50px;
+    background-color: $tenh-gray-color;
+}
+.buying__container__counter__score__title {
+    @include font-style($text-color,14px,500,157%,$font-family);
+}
+.buying__container__counter__score__description {
+    @include font-style($sixth-text-color,13px,500,169%,$font4);
+    opacity: 0.5;
+}
+.buying__container__counter__score__total {
+    @include font-style($sixth-text-color,13px,700,169%,$font-family);
+    @extend %flex-between;
+}
+.buying__container__counter__score__total-title {
+    color: $black-color;
+}
+.buying__container__counter__score__total-description {
+    font-family: $font4;
+}

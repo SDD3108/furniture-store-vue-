@@ -1,0 +1,93 @@
+@import '../components/vars.scss';
+@import '../components/mixins-extends.scss';
+
+.busket {
+    margin: 90px 0 130px 0;
+}
+.busket__cards {
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    // grid-template-rows: 172px 172px;
+}
+.busket__cards__card {
+    // @extend %flex-column;
+}
+.busket__cards__card__container{
+    display: flex;
+    align-items: center;
+}
+.busket__cards__card__container__image {
+    border-radius: 13px;
+    border: 1px solid $seventh-gray-color;
+}
+.busket__cards__card__container__image-img {
+    border-radius: 13px;
+}
+.busket__cards__card__container__text-n-delete{
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+.busket__cards__card__container__text{
+    @extend %flex-column;
+    margin-left: 22px;
+}
+.busket__cards__card__container__text__information{
+    @extend %flex-column;
+    gap: 13px
+}
+.busket__cards__card__container__text__information-title {
+    @include font-style($text-color,16px,600,130%,$font-family);
+    height: 11px;
+}
+.busket__cards__card__container__text__information-description {
+    @include font-style($second-gray-color,9px,400,122%,$font-family);
+    height: 7px;
+}
+.busket__cards__card__container__text__information__price {
+    @extend %flex-column;
+    gap: 13px;
+}
+.busket__cards__card__container__text__information__price-title {
+    @include font-style($black-color,16px,400,133%,$second-family);
+    height: 12px;
+}
+.busket__cards__card__container__text__information__price-description {
+    @include font-style($description-text-color,10px,400,100%,$second-family);
+    height: 8px;
+}
+.busket__cards__card__container__text-btn {
+    width: 164px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: $third-white-color;
+    margin-top: 32px;
+    cursor: pointer;
+    a{
+        @include font-style($fifth-text-color,14px,400,none,$second-family);
+        letter-spacing: 0.02em;
+    }
+}
+.busket__cards__card__container__delete {
+    @extend %flex-c;
+    cursor: pointer;
+}
+.busket__cards__card__container__delete-text {
+    margin-left: 8px;
+    @include font-style($fifth-text-color,14px,400,none,$second-family);
+    letter-spacing: 0.02em;
+}
+.busket__cards__card__line{
+    margin: 24px 0 24px 0;
+}
+.busket__empty {
+    @extend %flex-column-c-c;
+    height: 500px;
+}
+.busket__empty-title {
+    @include font-style($fifth-text-color,36px,600,150%,$font-family);
+    // @include font-style($seventh-text-color,36px,600,150%,$font-family);
+}
+.busket__empty-description{
+    @include font-style($desc-color,20px,500,100%,$font-family);
+}

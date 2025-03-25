@@ -1,0 +1,226 @@
+@import '../components/vars.scss';
+@import '../components/mixins-extends.scss';
+.card {
+    margin-top: 45px;
+}
+.card__container{
+    @extend %flex-c;
+    gap: 160px;
+}
+.card__container__image {
+    width: 555px;
+    height: 495px;
+    border-radius: 25px;
+    position: relative;
+    background-color: $second-white-color;
+}
+.card__container__image-img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+    background: none;
+    border-radius: 25px;
+}
+.card__container__image__discount {
+    width: 53px;
+    height: 27px;
+    border-radius: 4px;
+    @extend %flex-center;
+    background: linear-gradient(51deg, $gradient-color-one 0%, $gradient-color-two 100%);
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    @include font-style($white-color,13px,700,138%,$second-family);
+}
+.card__container__text {
+    width: 437px;
+    height: 422px;
+    // @extend %flex-column;
+    @extend %flex-column-between;
+}
+.card__container__text__container{
+    width: 416px;
+    height: 257px;
+    @extend %flex-column-between;
+}
+.card__container__text__card-text {
+    @extend %flex-column;
+    gap: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    // margin-right: 21px;
+}
+.card__container__text__card-text-title {
+    @include font-style($text-color,30px,600,130%,$font-family);
+}
+.card__container__text__card-text-description {
+    @include font-style($second-gray-color,18px,400,122%,$font-family);
+}
+.card__container__text__card-price {
+    @extend %flex-column;
+    gap: 20px;
+}
+.card__container__text__card-price-title {
+    height: 22px;
+    @include font-style($black-color,30px,400,133%,$second-family);
+}
+.card__container__text__card-price-description {
+    height: 15px;
+    @include font-style($description-text-color,20px,400,100%,$second-family);
+    text-decoration: line-through;
+}
+.card__container__text__buttons {
+    @extend %flex-between;
+}
+.card__container__text__buttons-btn {
+    // padding: 10px 45px;
+    height: 39px;
+    letter-spacing: 0.02em;
+}
+.card__container__text__buttons-btn-busket {
+    background-color: $first-color;
+    width: 173px;
+}
+.card__container__text__buttons-btn-buy {
+    width: 216px;
+    border: 1px solid $first-color;
+    background-color: $white-color;
+    color: $first-color;
+}
+.card__container__text__card-description-title {
+    @include font-style($fourth-text-color,16px,700,150%,$font-family);
+}
+.card__container__text__card-description-line {
+    background-color: $third-gray-color;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0 20px 0;
+}
+.card__container__text__card-description-description {
+    @include font-style($second-desc-color,16px,400,144%,$font-family);
+}
+.card__slider {
+    // display: flex;
+    width: 555px;
+    position: relative;
+    margin-top: 18px;
+    @extend %flex-c;
+}
+.card__slider__container {
+    overflow: hidden;
+}
+.card__slider__container__images {
+    // width: 555px;
+    width: 100%;
+    display: flex;
+    // overflow-x: scroll;
+    transition: transform 0.3s ease-in-out;
+    gap: 18px;
+}
+.card__slider__container__images__backgound{
+    background-color: $second-white-color;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.card__slider__container__images-img {
+    width: 125px;
+    height: 132px;
+    mix-blend-mode: darken;
+    border-radius: 15px;
+    overflow: hidden;
+    @extend %flex-center;
+}
+.card__slider__container__images-img:hover {
+    transform: scale(1.05)
+}
+.card__slider-btn{
+    @extend %flex-center;
+    width: 25px;
+    height: 33px;
+    border-radius: 3px;
+    border: 0.69px solid $desc-color;
+    background-color: $white-color;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    transition: background-color 0.2s ease-in-out;
+}
+.card__slider-btn-left{
+    left: -12px;
+}
+.card__slider-btn-rigth{
+    right: -12px;
+}
+.card__slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+.card__titles{
+    @include font-style($second-text-color,24px,700,250%,$font-family);
+}
+.popular__line{
+    background-color: $third-gray-color;
+    height: 1px;
+    width: 100%;
+}
+.popular__container-card{
+    margin-top: 50px;
+}
+.popular{
+    margin: 68px 0 90px 0;
+    margin-bottom: 90px;
+}
+.popular-similar{
+    margin: 90px 0 0;
+    // margin-bottom: 0;
+}
+
+.about {
+    margin-top: 80px;
+}
+.about__container {
+    border: 1px solid $third-gray-color;
+    border-radius: 25px;
+    // height: 685px;
+    margin-top: 47px;
+    padding: 40px 0 60px 60px;
+    max-height: 685px
+}
+.about__container__accordions {
+    @extend %flex-column;
+    gap: 20px;
+}
+.about__container__accordions__accordion {
+    width: 820px;
+}
+.about__container__accordions__accordion-title {
+    @extend %flex-between;
+    @include font-style($second-text-color,18px,400,111%,$font-family);
+    img{
+        margin-right: 8px;
+    }
+}
+.about__container__accordions__accordion-line{
+    margin-top: 10px;
+}
+.about__container__accordions__accordion__content {
+    // margin-top: 33px;
+    margin-top: 8px;
+    // margin: 33px 0 8px 0;
+    @extend %flex-column;
+}
+.about__container__accordions__accordion__content-text{
+    @extend %flex-between-c;
+    @include font-style($description-text-color,16px,400,none,$font-family);
+    margin-top: 10px;
+}
+.about__container__accordions__accordion__content-description{
+    @include font-style($second-text-color,16px,400,142%,$font-family);
+    @extend %flex-center;
+    margin-right: 3px;
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}
