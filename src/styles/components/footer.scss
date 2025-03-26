@@ -55,6 +55,7 @@
 .footer__menu__description {
     @include font-style($white-color,14px,500,129%,$font-family);
     margin-bottom: 3.3px;
+    cursor:pointer;
 }
 .footer__line{
     width: 100%;
